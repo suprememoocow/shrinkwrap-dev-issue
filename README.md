@@ -2,6 +2,10 @@
 
 This is why you should never run `npm shrinkwrap` when you've got dev-dependencies installed:
 
+This project has one production dependency, `glob` and one dev-dependency, `inherits`. `glob` happens to also use `inherits`. 
+
+If you run `npm shrinkwrap` when you've got dev-dependencies in your `node_modules` directory, your `npm-shrinkwrap.json` file will be inconsistent and will fail when you run `npm install --production` in a production environment.
+
 This is only a problem with versions of npm < 3
 
 ### The problem
