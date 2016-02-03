@@ -2,6 +2,7 @@
 
 This is why you should never run `npm shrinkwrap` when you've got dev-dependencies installed:
 
+This is only a problem with versions of npm < 3
 
 ### The problem
 
